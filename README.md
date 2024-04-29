@@ -4,7 +4,7 @@
 
 |**Nama**|**NIM**|**Kelas**|**Matkul**|
 |----|---|-----|------|
-|Muhammad Nurul Firdaus|312310495|TI.23.A5|Basis Data|
+|Fadzar Surya Wijaya|312310451|TI.23.A5|Basis Data|
 
 # Soal Latihan Praktikum
 ## Data Model Mapping
@@ -42,14 +42,14 @@ create table Mahasiswa (
     );
 ```
 
-![alt text](Screenshot/1.png)
+![alt text](ss/1.png)
 
 
 **Tampilkan hasil table :**
 
 `desc Mahasiswa;`
 
-![alt text](Screenshot/2.png)
+![alt text](ss/2.png)
 
 **2. Buat script untuk table Dosen :**
 ```
@@ -59,13 +59,13 @@ create table Dosen (
     );
 ```
 
-![alt text](Screenshot/3.png)
+![alt text](ss/3.png)
 
 **Tampilkan tabel :**
 
 `desc Dosen;`
 
-![alt text](Screenshot/4.png)
+![alt text](ss/4.png)
 
 **3. Buat script untuk Mata kuliah :**
 ```
@@ -76,13 +76,13 @@ create table Matakuliah (
     );
 ```
 
-![alt text](Screenshot/5.png)
+![alt text](ss/5.png)
 
 **Tampilkan table :**
 
 `desc Matakuliah;`
 
-![alt text](Screenshot/6.png)
+![alt text](ss/6.png)
 
 **4. Buat script untuk jadwal mengajar :**
 ```
@@ -98,13 +98,13 @@ create table JadwalMengajar (
     ); 
 ```
 
-![alt text](Screenshot/7.png)
+![alt text](ss/7.png)
 
 **Tampilkan table :**
 
 `desc JadwalMengajar;`
 
-![alt text](Screenshot/8.png)
+![alt text](ss/8.png)
 
 **5. Buat script untuk KRSMahasiswa :**
 ```
@@ -121,13 +121,13 @@ CREATE TABLE KRSMahasiswa (
     );
 ```
 
-![alt text](Screenshot/9.png)
+![alt text](ss/9.png)
 
 **Tampilkan table :**
 
 `desc KRSMahasiswa;`
 
-![alt text](Screenshot/10.png)
+![alt text](ss/10.png)
 
 # Soal Latihan Praktikum
 
@@ -162,43 +162,43 @@ insert into Mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos
 -> (11223349,"anton sinaga","laki-laki","1988-03-10","","Cikarang","","","");
 ```
 
-![alt text](Screenshot/11.png)
+![alt text](ss/11.png)
 
 **2. Menampilkan semua isi/record pada tabel bisa menggunakan kode berikut :**
 
 `select*from Mahasiswa;`
 
-![alt text](Screenshot/12.png)
+![alt text](ss/12.png)
 
 **3. Mengubah data tanggal lahir Mahasiswa yang bernama Ari menjadi : 1979-08-31 menggunakan kode berikut :**
 
 `update Mahasiswa set tgl_lahir='1979-08-31' where nim=11223344;`
 
-![alt text](Screenshot/13.png)
+![alt text](ss/13.png)
 
 **4. Menampilkan satu baris / record data yang telah diubah tadi yaitu record dengan nama Ari saja dengan cara sebagai berikut :**
 
 `select*from Mahasiswa where nim=11223344;`
 
-![alt text](Screenshot/14.png)
+![alt text](ss/14.png)
 
 **5. Menghapus Mahasiswa yang bernama Dina dengan cara sebagai berikut:**
 
 `delete from Mahasiswa where nim=11223346;`
 
-![alt text](Screenshot/15.png)
+![alt text](ss/15.png)
 
 **6. Menampilkan record atau data yang tanggal kelahirannya lebih dari atau sama dengan 1996-1-2 dengan cara sebagai berikut :**
 
 `select*from Mahasiswa where tgl_lahir<='1996-1-2';`
 
-![alt text](Screenshot/16.png)
+![alt text](ss/16.png)
 
 **7. Menampilkan semua Mahasiswa yang berasal dari Bekasi dan berjenis kelamin perempuan dengan cara sebagai berikut :**
 
 `select*from Mahasiswa where kota='bekasi' and jenis_kelamin='Perempuan';`
 
-![alt text](Screenshot/17.png)
+![alt text](ss/17.png)
 
 **8. Menampilkan semua Mahasiswa yang berasal dari Bekasi dengan kelamin laki-laki atau Mahasiswa yang berumur lebih dari 22 tahun dengan kelamin wanita dengan cara sebagai berikut :**
 ```
@@ -207,19 +207,19 @@ or tgl_lahir<='2002-4-22'
 and jenis_kelamin='Perempuan';
 ```
 
-![alt text](Screenshot/18.png)
+![alt text](ss/18.png)
 
 **9. Menampilkan data nama dan jalan Mahasiswa saja dari tabel tersebut dengan cara sebagai berikut :**
 
 `select nama, jalan from Mahasiswa;`
 
-![alt text](Screenshot/19.png)
+![alt text](ss/19.png)
 
 **10. Menampilkan data Mahasiswa terurut berdasarkan nama dengan cara sebagai berikut :**
 
 `select*from Mahasiswa -> order by nama asc;`
 
-![alt text](Screenshot/20.png)
+![alt text](ss/20.png)
 
 # Evaluasi dan Pertanyaan
 
@@ -231,9 +231,10 @@ and jenis_kelamin='Perempuan';
 
 *Contoh :*
 
-`INSERT INTO biodata (nim, nama, alamat) VALUE ('1234','Uyun','Bekasi');`
+`INSERT INTO biodata (nim, nama, alamat) VALUE ('312310451','fadzar','Bekasi'),
+('312310487', 'thanos sinaga', 'Jakarta');
 
-![alt text](Screenshot/21.png)
+![alt text](ss/21.png)
 
 **2. Menampilkan data :**
 
@@ -243,7 +244,7 @@ and jenis_kelamin='Perempuan';
 
 `SELECT*FROM biodata;`
 
-![alt text](Screenshot/22.png)
+![alt text](ss/22.png)
 
 **3. Mengubah data :**
 
@@ -251,9 +252,9 @@ and jenis_kelamin='Perempuan';
 
 *Contoh :*
 
-`UPDATE biodata SET nama='Nurul', alamat='Setu' WHERE nim='1234';`
+UPDATE biodata SET nama='udap', alamat='planet lain' WHERE nim='312310487';
 
-![alt text](Screenshot/23.png)
+![alt text](ss/23.png)
 
 **4. Menghapus data :**
 
@@ -261,9 +262,9 @@ and jenis_kelamin='Perempuan';
 
 *Contoh :*
 
-`DELETE FROM biodata WHERE nim=‘1234’`
+DELETE FROM biodata WHERE nim='312310487';
 
-![alt text](Screenshot/24.png)
+![alt text](ss/24.png)
 
 ***Apa bedanya penggunaan BETWEEN dan penggunaan operator >= dan <= ?***
 
